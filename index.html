@@ -4,28 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KUA Kecamatan Porong</title>
+    <style>
+        /* Ini adalah area CSS untuk mengatur desain web */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6; /* Warna latar belakang abu-abu terang */
+            color: #333;
+        }
+        header {
+            background-color: #047857; /* Hijau khas Kemenag */
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0 0 15px 0;
+            font-size: 28px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #065f46; /* Hijau lebih gelap saat disentuh kursor */
+        }
+        main {
+            padding: 50px 20px;
+        }
+        .hero-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            border-top: 5px solid #fbbf24; /* Garis aksen emas */
+        }
+        .hero-section h2 {
+            color: #047857;
+            margin-top: 0;
+            font-size: 24px;
+        }
+        .hero-section p {
+            line-height: 1.6;
+            color: #555;
+            font-size: 16px;
+        }
+        .btn-daftar {
+            background-color: #fbbf24; /* Kuning emas */
+            color: #1f2937;
+            border: none;
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: background 0.3s;
+        }
+        .btn-daftar:hover {
+            background-color: #f59e0b;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>KUA Kecamatan Porong</h1>
         <nav>
             <ul>
-                <!-- Menu utama web KUA -->
                 <li><a href="#beranda">Beranda</a></li>
                 <li><a href="#profil">Profil KUA</a></li>
                 <li><a href="#layanan">Layanan Publik</a></li>
                 <li><a href="#informasi">Informasi & Berita</a></li>
                 <li><a href="#galeri">Galeri</a></li>
-                <li><a href="#kontak">Kontak & Pengaduan</a></li>
+                <li><a href="#kontak">Kontak</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="beranda">
-            <h2>Selamat Datang di KUA Porong</h2>
-            <p>Melayani Pendaftaran Nikah & Rujuk, Bimbingan Perkawinan, hingga Zakat & Wakaf.</p>
-            <button>Daftar Nikah Online</button>
+        <section class="hero-section" id="beranda">
+            <h2>Selamat Datang di Pusat Layanan Terpadu</h2>
+            <p>Kami hadir untuk memberikan pelayanan terbaik bagi masyarakat Kecamatan Porong. Melayani Pendaftaran Nikah & Rujuk, Bimbingan Perkawinan, hingga administrasi Zakat & Wakaf secara transparan dan profesional.</p>
+            <button class="btn-daftar">Daftar Nikah Online</button>
         </section>
     </main>
 </body>

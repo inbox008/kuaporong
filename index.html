@@ -4,33 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KUA Kecamatan Porong</title>
-         }<style>
-           .content-section {
-            background-color: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            max-width: 800px;
-            margin: 40px auto;
-            border-top: 4px solid #047857;
-        }
-        .content-section h2 {
-            color: #047857;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 10px;
-        }
-        .content-section ul {
-            line-height: 1.8;
-            color: #444;
+    <style>
+        /* Desain CSS Global */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7f6; /* Warna latar belakang abu-abu terang */
+            background-color: #f4f7f6;
             color: #333;
         }
+        
+        /* Desain Header & Navigasi */
         header {
-            background-color: #047857; /* Hijau khas Kemenag */
+            background-color: #047857;
             color: white;
             padding: 25px 20px;
             text-align: center;
@@ -58,20 +44,24 @@
             transition: background 0.3s;
         }
         nav ul li a:hover {
-            background-color: #065f46; /* Hijau lebih gelap saat disentuh kursor */
+            background-color: #065f46;
         }
+        
+        /* Desain Area Konten */
         main {
             padding: 50px 20px;
         }
+        
+        /* Desain Beranda (Hero Section) */
         .hero-section {
             background-color: white;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 10px 15px rgba(0,0,0,0.05);
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 40px auto;
             text-align: center;
-            border-top: 5px solid #fbbf24; /* Garis aksen emas */
+            border-top: 5px solid #fbbf24;
         }
         .hero-section h2 {
             color: #047857;
@@ -84,7 +74,7 @@
             font-size: 16px;
         }
         .btn-daftar {
-            background-color: #fbbf24; /* Kuning emas */
+            background-color: #fbbf24;
             color: #1f2937;
             border: none;
             padding: 12px 28px;
@@ -97,6 +87,43 @@
         }
         .btn-daftar:hover {
             background-color: #f59e0b;
+        }
+
+        /* Desain Area Menu Lainnya */
+        .content-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto 40px auto; /* Memberi jarak antar kotak */
+            border-top: 4px solid #047857;
+        }
+        .content-section h2 {
+            color: #047857;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .content-section p, .content-section ul {
+            line-height: 1.8;
+            color: #444;
+        }
+        .content-section ul {
+            padding-left: 20px;
+        }
+        .content-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        /* Desain Footer */
+        footer {
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -116,47 +143,57 @@
     </header>
 
     <main>
+        <!-- Area Beranda -->
         <section class="hero-section" id="beranda">
             <h2>Selamat Datang di Pusat Layanan Terpadu</h2>
             <p>Kami hadir untuk memberikan pelayanan terbaik bagi masyarakat Kecamatan Porong. Melayani Pendaftaran Nikah & Rujuk, Bimbingan Perkawinan, hingga administrasi Zakat & Wakaf secara transparan dan profesional.</p>
-            <button class="btn-daftar">Daftar Nikah Online</button>
-        </section><!-- Menu Profil KUA -->
-        <section id="profil" class="content-section">
+            <button class="btn-daftar" onclick="alert('Fitur ini akan diarahkan ke link SIMKAH')">Daftar Nikah Online</button>
+        </section>
+
+        <!-- Area Profil KUA -->
+        <section class="content-section" id="profil">
             <h2>Profil KUA Porong</h2>
             <p><strong>Visi & Misi:</strong> Mewujudkan pelayanan keagamaan yang prima dan transparan bagi masyarakat Kecamatan Porong.</p>
             <p><strong>Struktur Organisasi:</strong> Terdiri dari Kepala KUA, Penghulu, dan Staf Administrasi yang siap melayani Anda.</p>
+            <p><strong>Maklumat Pelayanan:</strong> Kami berkomitmen untuk memberikan pelayanan yang cepat, tepat, dan bebas dari pungutan liar (pungli) di luar ketentuan resmi.</p>
         </section>
 
-        <!-- Menu Layanan Publik -->
-        <section id="layanan" class="content-section">
+        <!-- Area Layanan Publik -->
+        <section class="content-section" id="layanan">
             <h2>Layanan Publik</h2>
             <ul>
-                <li><strong>Pendaftaran Nikah:</strong> Pendaftaran online terintegrasi SIMKAH. Siapkan syarat dokumen seperti N1, N2, dan N4. Biaya Rp0 di KUA pada jam kerja.</li>
-                <li><strong>Bimbingan Perkawinan:</strong> Kursus Calon Pengantin (Catin) dan Konseling Keluarga.</li>
-                <li><strong>Zakat & Wakaf:</strong> Pelayanan Akta Ikrar Wakaf (AIW).</li>
-                <li><strong>Bimbingan Syariah:</strong> Permohonan kalibrasi arah kiblat untuk masjid, musala, dan rumah.</li>
+                <li><strong>Pendaftaran Nikah:</strong> Pendaftaran online terintegrasi SIMKAH. Siapkan dokumen persyaratan (N1-N4). Biaya Rp0 jika akad dilaksanakan di KUA pada jam kerja.</li>
+                <li><strong>Bimbingan Perkawinan:</strong> Jadwal Kursus Calon Pengantin (Catin) dan layanan konseling keluarga.</li>
+                <li><strong>Zakat & Wakaf:</strong> Pelayanan penerbitan Akta Ikrar Wakaf (AIW).</li>
+                <li><strong>Bimbingan Syariah:</strong> Permohonan verifikasi dan kalibrasi arah kiblat untuk masjid, musala, maupun rumah tangga.</li>
             </ul>
         </section>
 
-        <!-- Menu Informasi & Berita -->
-        <section id="informasi" class="content-section">
+        <!-- Area Informasi & Berita -->
+        <section class="content-section" id="informasi">
             <h2>Informasi & Berita</h2>
-            <p>Dapatkan update terbaru seputar kegiatan keagamaan, pengumuman operasional, dan edukasi hukum keluarga di wilayah Porong.</p>
+            <p>Dapatkan pembaruan terkini mengenai kegiatan operasional, acara bimbingan, penyuluhan, dan edukasi hukum keluarga di lingkungan Kecamatan Porong.</p>
+            <p><em>Belum ada berita terbaru saat ini.</em></p>
         </section>
 
-        <!-- Menu Galeri -->
-        <section id="galeri" class="content-section">
+        <!-- Area Galeri -->
+        <section class="content-section" id="galeri">
             <h2>Galeri Kegiatan</h2>
-            <p>[Area ini nantinya bisa diisi dengan foto-foto kegiatan bimbingan atau pelayanan KUA]</p>
+            <p>[Area ini nantinya akan menampilkan dokumentasi foto kegiatan KUA Porong]</p>
         </section>
 
-        <!-- Menu Kontak -->
-        <section id="kontak" class="content-section">
+        <!-- Area Kontak & Pengaduan -->
+        <section class="content-section" id="kontak">
             <h2>Kontak & Pengaduan</h2>
             <p><strong>Lokasi:</strong> Jl. Raya Porong No. XX, Kecamatan Porong.</p>
             <p><strong>Jam Kerja:</strong> Senin - Jumat (08.00 - 15.00 WIB)</p>
-            <p><strong>WhatsApp:</strong> 0812-XXXX-XXXX (Hanya Chat)</p>
+            <p><strong>WhatsApp:</strong> 0812-XXXX-XXXX (Layanan Chat)</p>
+            <p>Gunakan nomor di atas untuk mengirimkan pertanyaan, saran, atau laporan terkait pelayanan KUA.</p>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 KUA Kecamatan Porong. Hak Cipta Dilindungi.</p>
+    </footer>
 </body>
 </html>

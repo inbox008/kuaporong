@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KUA Kecamatan Porong - Layanan Terpadu</title>
+    
+    <!-- Link Icon untuk FontAwesome (Agar logo WhatsApp muncul) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         /* CSS Reset & Variabel */
         :root {
@@ -14,6 +18,7 @@
             --text-dark: #111827;
             --text-gray: #4b5563;
             --border-color: #e5e7eb;
+            --wa-color: #25D366; /* Warna Hijau Resmi WhatsApp */
         }
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -70,219 +75,39 @@
         }
         .nav-btn:hover { background-color: var(--primary-dark); }
 
-        /* Mobile Menu (Responsive) */
         @media (max-width: 768px) {
-            .nav-menu {
-                display: none; /* Disembunyikan di HP untuk sementara, bisa dikembangkan dengan Javascript */
-            }
+            .nav-menu { display: none; }
         }
 
         /* --- HERO SECTION (Bagian Utama) --- */
         .hero {
             background-color: white;
-            padding: 80px 20px;
+            padding: 100px 20px; /* Diperbesar jaraknya */
             text-align: center;
             border-bottom: 1px solid var(--border-color);
         }
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
+        
+        /* TULISAN KUA PORONG SUPER BESAR */
         .hero h1 {
-            font-size: 40px;
-            font-weight: 800;
-            color: var(--text-dark);
-            margin-bottom: 20px;
-            line-height: 1.2;
+            font-size: 75px; /* Ukuran sangat besar */
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            text-transform: uppercase;
         }
+        .hero h2 {
+            font-size: 24px;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
         .hero p {
             font-size: 18px;
-            color: var(--text-gray);
-            margin-bottom: 35px;
-        }
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 14px 28px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        .btn-primary:hover { background-color: var(--primary-dark); }
-        .btn-secondary {
-            background-color: white;
-            color: var(--text-dark);
-            padding: 14px 28px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 1px solid var(--border-color);
-            transition: 0.3s;
-        }
-        .btn-secondary:hover { border-color: var(--text-gray); }
-
-        /* Penyesuaian Hero untuk HP */
-        @media (max-width: 600px) {
-            .hero { padding: 50px 20px; }
-            .hero h1 { font-size: 32px; }
-            .hero-buttons { flex-direction: column; width: 100%; }
-            .btn-primary, .btn-secondary { width: 100%; }
-        }
-
-        /* --- SECTIONS (Profil, Layanan, Kontak) --- */
-        .section-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .section-header h2 {
-            font-size: 32px;
-            color: var(--text-dark);
-            margin-bottom: 15px;
-        }
-        .section-header p {
-            color: var(--text-gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* --- GRID CARDS (Kotak Layanan Responsif) --- */
-        .grid-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            border-color: var(--primary-color);
-        }
-        .card h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-        .card p, .card ul {
-            font-size: 15px;
-            color: var(--text-gray);
-        }
-        .card ul {
-            padding-left: 20px;
-            margin-top: 10px;
-        }
-        .card ul li { margin-bottom: 8px; }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: white;
-            border-top: 1px solid var(--border-color);
-            padding: 40px 20px;
-            text-align: center;
-        }
-        footer p { color: var(--text-gray); font-size: 14px; }
-    </style>
-</head>
-<body>
-
-    <!-- NAVIGASI -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo">KUA Porong.</a>
-            <ul class="nav-menu">
-                <li><a href="#layanan">Layanan</a></li>
-                <li><a href="#profil">Profil</a></li>
-                <li><a href="#kontak">Kontak</a></li>
-                <li><a href="https://simkah4.kemenag.go.id" class="nav-btn">SIMKAH Web</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <!-- BAGIAN UTAMA (HERO) -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Pusat Layanan Keagamaan Terpadu & Transparan.</h1>
-            <p>Berkomitmen memberikan kepastian standar mutu layanan yang cepat, tepat, dan bebas pungutan liar bagi seluruh masyarakat Kecamatan Porong[cite: 1].</p>
-            <div class="hero-buttons">
-                <a href="https://simkah4.kemenag.go.id" class="btn-primary">Daftar Nikah Online</a>
-                <a href="#layanan" class="btn-secondary">Lihat Semua Layanan</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- LAYANAN PUBLIK -->
-    <section id="layanan" class="section-container">
-        <div class="section-header">
-            <h2>Layanan Publik Kami</h2>
-            <p>KUA Porong melayani pendaftaran nikah, bimbingan keluarga, hingga kemasjidan dengan standar Kementerian Agama.</p>
-        </div>
-        
-        <div class="grid-cards">
-            <!-- Card 1 -->
-            <div class="card">
-                <h3>Nikah & Rujuk</h3>
-                <p>Pendaftaran terintegrasi SIMKAH. Siapkan dokumen N1, N2, N4. Biaya Rp0 di KUA (jam kerja) dan Rp600.000 (luar KUA/jam kerja)[cite: 1].</p>
-            </div>
-            
-            <!-- Card 2 -->
-            <div class="card">
-                <h3>Bimbingan Perkawinan</h3>
-                <p>Melayani BP4 atau Konseling Keluarga dan pendaftaran Kursus Calon Pengantin (Catin) untuk membentuk ketahanan keluarga[cite: 1].</p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="card">
-                <h3>Zakat & Wakaf</h3>
-                <p>Fasilitasi penerbitan Akta Ikrar Wakaf (AIW) dan konsultasi tata kelola harta wakaf di wilayah Kecamatan Porong[cite: 1].</p>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="card">
-                <h3>Bimbingan Syariah</h3>
-                <p>Melayani permohonan Verifikasi & Kalibrasi Arah Kiblat untuk rumah/masjid, serta pendaftaran ID SIMAS[cite: 1].</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROFIL KUA -->
-    <section id="profil" style="background-color: white;">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Profil Instansi</h2>
-                <p>Mewujudkan pelayanan publik KUA Porong yang prima bagi masyarakat[cite: 1].</p>
-            </div>
-            <div class="grid-cards">
-                <div class="card">
-                    <h3>Struktur Organisasi</h3>
-                    <p>Terdiri dari Kepala KUA, Penghulu, dan Staf Administrasi yang berdedikasi melayani Anda pada jam kerja operasional[cite: 1].</p>
-                </div>
-                <div class="card">
-                    <h3>Edukasi & Informasi</h3>
-                    <p>Temukan artikel terkait fiqih munakahat, pencegahan stunting, serta informasi terbaru mengenai jadwal bimwin dan operasional[cite: 1].</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- KONTAK -->
-    <section id="kontak" class="section-container" style="background-color: var(--text-dark); color: white; border-radius: 16px; margin-bottom: 50px;">
-        <div class="section-header" style="margin-bottom: 30px;">
-            <h2 style="color: white;">Hubungi KUA Porong</h2>
-            <p style="color: #9ca3af;">Kami
+            color: var(--text-
